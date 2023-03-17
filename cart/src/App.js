@@ -1,10 +1,12 @@
 import './App.css';
+import CartContainer from './Components/Cart/CartContainer';
 import Nav from './Components/Nav/Nav';
 
 function App() {
   return (
     <div className="App">
       <Nav />
+      <CartContainer />
     </div>
   );
 }

@@ -5,7 +5,7 @@ export default function Nav() {
   return (
     <div className={styles.nav}>
       <div className={styles.title}>
-        Cart
+        Cart Project
       </div>
       <div className={styles.icon}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">

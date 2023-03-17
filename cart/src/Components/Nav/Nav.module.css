@@ -3,7 +3,7 @@
   justify-content: space-around;
   align-items: center;
   height: 3em;
-  border-bottom: 1.3px solid black;
+  border-bottom: 0.8px solid rgb(97, 95, 95);
 }
 
 .nav .title {

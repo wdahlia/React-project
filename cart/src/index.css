@@ -18,6 +18,7 @@ button {
   outline: none;
   border: none;
   background-color: initial;
+  cursor: pointer;
 }
 
 code {
