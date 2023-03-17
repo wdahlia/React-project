@@ -1,25 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Nav from './Components/Nav/Nav';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
     </div>
   );
 }
 
 export default App;
+
+// Context API 사용해서 내려줄 정보
+// Reducer 사용할 예정 모든 것에 일일히 useReducer을 사용할 수 없으니
+// 변수 지정해서 다른 컴포넌트에 내려주기

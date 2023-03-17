@@ -1,0 +1,37 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3em;
+  border-bottom: 1.3px solid black;
+}
+
+.nav .title {
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.nav .icon {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.nav .icon svg {
+  width: 1.3em;
+}
+
+.nav .icon .num {
+  position: absolute;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 2px solid rgb(18, 17, 15);
+  top: 0.2em;
+  left: 2.3em;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
