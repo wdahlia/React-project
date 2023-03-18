@@ -9,7 +9,10 @@ export default function CartContainer() {
 
   const handleDelete = (k) => {
     setList(list.filter((li) => (li.id !== k)));
-    console.log(list)
+  }
+
+  const handleReset = () => {
+    setList([]);
   }
 
   return (
@@ -18,7 +21,7 @@ export default function CartContainer() {
         <h1 className={styles.title}>Cart Item</h1>
         <div className={styles.line}></div>
         { list.map((data) => <CartItem key={data.id} id={data.id} data={data} onDelete={handleDelete}/>)}
-        <button className={styles.clearBtn}>Clear Cart</button>
+        <button className={styles.clearBtn} onClick={handleReset}>Clear Cart</button>
       </article>
     </section>
   );
