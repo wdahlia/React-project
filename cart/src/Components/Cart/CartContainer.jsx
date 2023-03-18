@@ -1,19 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './CartContainer.module.css';
-import data from '../../data';
 import CartItem from './CartItem';
+import { useCartContext } from '../../Context/CartProvider';
 
 export default function CartContainer() {
-  const dataList = data;
-  const [list, setList] = useState(dataList);
-
-  const handleDelete = (k) => {
-    setList(list.filter((li) => (li.id !== k)));
-  }
-
-  const handleReset = () => {
-    setList([]);
-  }
+  const { cartItems, amount, total, handleReset } = useCartContext();
 
   return (
     <section className={styles.section}>
@@ -21,10 +12,10 @@ export default function CartContainer() {
         <div className={styles.box}>
           <h1 className={styles.title}>Cart Item</h1>
           <div className={styles.line}></div>
-          { list.map((data) => <CartItem key={data.id} id={data.id} data={data} onDelete={handleDelete} className={styles.items}/>)}
+          { cartItems.map((data) => <CartItem key={data.id} data={data} className={styles.items}/>)}
         </div>
-        <div className={styles.totalCount}><span>0</span>개</div>
-        <div className={styles.totalPrice}>$ 333.333</div>
+        <div className={styles.totalCount}><span>{amount}</span>개</div>
+        <div className={styles.totalPrice}>$ {total}</div>
         <button className={styles.clearBtn} onClick={handleReset}>Clear Cart</button>
       </article>
     </section>
