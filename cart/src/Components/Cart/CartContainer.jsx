@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './CartContainer.module.css';
 import data from '../../data';
 import CartItem from './CartItem';
 
 export default function CartContainer() {
   const dataList = data;
+  const [list, setList] = useState(dataList);
+
+  const handleDelete = (k) => {
+    setList(list.filter((li) => (li.id !== k)));
+    console.log(list)
+  }
+
   return (
-    <section className={styles.container}>
-      <h1 className={styles.title}>Cart Item</h1>
-      <div className={styles.line}></div>
-      { dataList.map((data) => <CartItem key={data.id} data={data}/>)}
-      <button className={styles.clearBtn}>Clear Cart</button>
+    <section className={styles.section}>
+      <article className={styles.container}>
+        <h1 className={styles.title}>Cart Item</h1>
+        <div className={styles.line}></div>
+        { list.map((data) => <CartItem key={data.id} id={data.id} data={data} onDelete={handleDelete}/>)}
+        <button className={styles.clearBtn}>Clear Cart</button>
+      </article>
     </section>
   );
 }
