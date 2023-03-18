@@ -7,7 +7,6 @@
 
 .container {
   width: 80vw;
-  min-height: 35em;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -18,7 +17,14 @@
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.container .title {
+.container .box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  min-height: 25em;
+}
+
+.box .title {
   text-indent: 5px;
   font-size: 1.2rem;
   font-weight: 500;
@@ -27,6 +33,17 @@
 
 .container .line {
   border-bottom: 1.2px solid rgb(123, 119, 119);
+}
+
+.container .totalCount,
+.container .totalPrice {
+  text-align: end;
+  font-size: 0.8rem;
+}
+
+.container .totalCount span,
+.container .totalPrice {
+  font-weight: 800;
 }
 
 .container .clearBtn {
@@ -38,4 +55,5 @@
   font-weight: 800;
   text-transform: uppercase;
   align-self: center;
+  margin-top: 3rem;
 }

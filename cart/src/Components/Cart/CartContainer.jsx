@@ -18,9 +18,13 @@ export default function CartContainer() {
   return (
     <section className={styles.section}>
       <article className={styles.container}>
-        <h1 className={styles.title}>Cart Item</h1>
-        <div className={styles.line}></div>
-        { list.map((data) => <CartItem key={data.id} id={data.id} data={data} onDelete={handleDelete}/>)}
+        <div className={styles.box}>
+          <h1 className={styles.title}>Cart Item</h1>
+          <div className={styles.line}></div>
+          { list.map((data) => <CartItem key={data.id} id={data.id} data={data} onDelete={handleDelete} className={styles.items}/>)}
+        </div>
+        <div className={styles.totalCount}><span>0</span>개</div>
+        <div className={styles.totalPrice}>$ 333.333</div>
         <button className={styles.clearBtn} onClick={handleReset}>Clear Cart</button>
       </article>
     </section>
