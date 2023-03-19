@@ -1,12 +1,19 @@
 import './App.css';
 import CartContainer from './Components/Cart/CartContainer';
 import Nav from './Components/Nav/Nav';
+import { useCartContext } from './Context/CartProvider';
+
 
 function App() {
+  const { loading } = useCartContext();
   return (
     <div className="App">
       <Nav />
-      <CartContainer />
+      { loading ? (
+        <div className='loading'>
+          Loading ...
+        </div>
+      ) : <CartContainer /> }
     </div>
   );
 }

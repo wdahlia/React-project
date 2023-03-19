@@ -6,7 +6,7 @@ import reducer from '../Reducer/reducer';
 // Context API 활용해야함
 const CartContext = createContext();
 
-// const url = 'https://course-api.com/react-useReducer-cart-project'
+const url = 'https://course-api.com/react-useReducer-cart-project'
 const initialState = {
   loading: false, // url fetch 해올때 걸리는 시간 동안 loading 표시 나타내 줄 것
   cartItems: items,
@@ -33,6 +33,20 @@ const CartProvider = ({ children }) => {
     dispatch({ type: 'CHANGE_AMOUNT', data: { id, cmd } })
   }
 
+  const fetchData = async() => {
+    dispatch({ type: 'LOADING' })
+    const response = await fetch(url)
+    const cartItems = await response.json()
+    console.log(cartItems);
+    dispatch({ type: 'FETCH_DATA', data: cartItems })
+  }
+
+  // 페이지가 재로딩 될때마다, API 받아오기
+  useEffect(() => {
+    fetchData();
+  }, [])
+
+  // cartItems 내부에서 개수의 변화가 생길 때 즉, 재마운트 될 때
   useEffect(() => {
     dispatch({ type: 'GET_TOTALS' })
 

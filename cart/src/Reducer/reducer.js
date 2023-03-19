@@ -46,6 +46,16 @@ const reducer = (state, action) => {
   total = total.toFixed(2);
   return { ...state, total, amount }
   }
+
+  // action이 LOADING 일 때,
+  if ( action.type === 'LOADING' ) {
+    return { ...state, loading: true }
+  }
+
+  // action이 FETCH_DATA 일 때,
+  if ( action.type === 'FETCH_DATA' ) {
+
+  }
 }
 
 export default reducer
