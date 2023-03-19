@@ -54,7 +54,7 @@ const reducer = (state, action) => {
 
   // action이 FETCH_DATA 일 때,
   if ( action.type === 'FETCH_DATA' ) {
-
+    return { ...state, loading: false, cartItems: action.data }
   }
 }
 
