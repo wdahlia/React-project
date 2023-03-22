@@ -12,6 +12,8 @@ const initialState = {
   cartItems: items,
   total: 0,
   amount: 0,
+  check: false,
+  btnStyle: false,
 }
 
 const CartProvider = ({ children }) => {
@@ -31,6 +33,16 @@ const CartProvider = ({ children }) => {
   // 상품 개수 변경
   const changeAmount = (id, cmd) => {
     dispatch({ type: 'CHANGE_AMOUNT', data: { id, cmd } })
+  }
+
+  // 상품 check 표시
+  const handleCheck = (id, chk) => {
+    dispatch({ type: 'CHECK_ITEM', data: { id, chk } })
+  }
+  
+  // 체크된 상품 remove
+  const removeCheckItems = () => {
+    dispatch({ type: 'REMOVE_ITEMS' })
   }
 
   const fetchData = async() => {
@@ -59,6 +71,8 @@ const CartProvider = ({ children }) => {
         handleReset, 
         handleDelete, 
         changeAmount,
+        handleCheck,
+        removeCheckItems,
       }}>
       { children }
     </CartContext.Provider>

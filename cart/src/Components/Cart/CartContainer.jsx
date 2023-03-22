@@ -4,13 +4,15 @@ import CartItem from './CartItem';
 import { useCartContext } from '../../Context/CartProvider';
 
 export default function CartContainer() {
-  const { cartItems, amount, total, handleReset } = useCartContext();
-
+  const { removeCheckItems, cartItems, amount, total, handleReset } = useCartContext();
   return (
     <section className={styles.section}>
       <article className={styles.container}>
         <div className={styles.box}>
-          <h1 className={styles.title}>Cart Item</h1>
+          <div className={styles.header}>
+            <h1 className={styles.title}>Cart Item</h1>
+            <button className={styles.removeBtn} onClick={removeCheckItems}>선택 상품 삭제</button>
+          </div>
           <div className={styles.line}></div>
           { cartItems.map((data) => <CartItem key={data.id} data={data} className={styles.items}/>)}
         </div>

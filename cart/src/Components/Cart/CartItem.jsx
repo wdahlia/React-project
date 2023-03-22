@@ -3,8 +3,9 @@ import { useCartContext } from '../../Context/CartProvider';
 import styles from './CartItem.module.css';
 
 export default function CartItem({ data }) {
-  const { handleDelete, changeAmount } = useCartContext();
+  const { handleCheck ,handleDelete, changeAmount } = useCartContext();
   // const [count, setCount] = useState(0);
+
 
   // const handleIncrease = () => {
   //   setCount(count+1)
@@ -19,6 +20,8 @@ export default function CartItem({ data }) {
   return (
     <div className={styles.container}>
       <div className={styles.itemInfo}>
+        <input type='checkbox' id={`checkbox${data.id}`} onChange={(e) => handleCheck(data.id, e.target.checked)} />
+        <label htmlFor={`checkbox${data.id}`} />
         <img src={data.img} alt={data.img} className={styles.img} />
         <div className={styles.itemContent}>
           <h5 className={styles.title}>{data.title}</h5>

@@ -24,7 +24,18 @@
   min-height: 25em;
 }
 
-.box .title {
+.box .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .removeBtn {
+  text-decoration: underline;
+  color:rgb(123, 119, 119);
+}
+
+.header .title {
   text-indent: 5px;
   font-size: 1.2rem;
   font-weight: 500;

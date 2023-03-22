@@ -56,6 +56,21 @@ const reducer = (state, action) => {
   if ( action.type === 'FETCH_DATA' ) {
     return { ...state, loading: false, cartItems: action.data }
   }
+
+  if ( action.type === 'CHECK_ITEM' ) {
+    let checkItem = state.cartItems.map((item) => {
+      if (item.id === action.data.id) {
+        return { ...item, check : action.data.chk }
+      }
+      return item
+    })
+    return { ...state, cartItems : checkItem }
+  } 
+
+  if ( action.type === 'REMOVE_ITEMS' ) {
+    let removeItems = state.cartItems.filter((item) => (item.check !== true));
+    return { ...state, cartItems : removeItems }
+  } 
 }
 
 export default reducer

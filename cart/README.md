@@ -2,7 +2,7 @@
 # Cart
 <br>
 
-![ezgif-4-be937260bf](https://user-images.githubusercontent.com/108653518/226877890-a1643619-5c77-475e-8e40-f5d7d1c1d8f3.gif)
+![ezgif-5-154fb45560](https://user-images.githubusercontent.com/108653518/226921429-fd6a4cae-2a9f-4785-93d2-88113e184f0d.gif)
 
 <br>
 
@@ -21,6 +21,8 @@
 - `Section`
 	- `CartContainer`
 		- `CartItem` 컴포넌트 사용
+		- `선택 상품 삭제` 버튼 제작
+  		- checkbox 선택된 상품 지워짐
 		- 상품 총 개수, 상품
 	- `CartItem`
 		- 상품 사진, 상품 이름, 상품 가격, 상품 삭제 버튼
