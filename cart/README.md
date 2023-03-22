@@ -1,70 +1,36 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Cart
+<br>
 
-## Available Scripts
+![ezgif-4-be937260bf](https://user-images.githubusercontent.com/108653518/226877890-a1643619-5c77-475e-8e40-f5d7d1c1d8f3.gif)
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+### Cart Component 구성
+- API 로딩 될 때, loading: true로 변경, loading 표시 출력
+- Context API 사용 - `CartProvider.js`
+	- fetch해온 데이터 자식 컴포넌트내에서 사용할 수 있게끔
+	- reducer에서 실행시킬 함수 변수에 할당해서 자식 컴포넌트에서 사용할 수 있게끔
+- `reducer.js`
+  - action에 따른 함수들 정의
+  - 전체 state 관리
+- `Nav` 
+	- logo
+		- `pointer: default`로 설정
+	- Cart Icon + 상품 총 개수
+- `Section`
+	- `CartContainer`
+		- `CartItem` 컴포넌트 사용
+		- 상품 총 개수, 상품
+	- `CartItem`
+		- 상품 사진, 상품 이름, 상품 가격, 상품 삭제 버튼
+		- 상품 개수 증가, 감소 버튼 
+			- 클릭 시, Nav에 있는 상품 총 개수와 CartContainer 내부에 있는 총 개수 역시 감소되어야함
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### reduce, reduceRight
+	sort, every, some, find, findIndex, includes도 reduce로 구현 가능
+1. reduce
+	- 배열.reduce((누적값, 현잿값, 인덱스, 요소) => { return 결과 }, 초깃값)
+2. reduceRight
+	- 요소 순회를 오른쪽부터 왼쪽으로 돈다
