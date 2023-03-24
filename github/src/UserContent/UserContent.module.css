@@ -1,14 +1,14 @@
 
 .container {
   font-family: 'Prompt', sans-serif;
-  background-color: rgb(242, 244, 250);
-  padding: 2rem 1.2rem;
+  background-color: var(--container);
+  padding: 2rem 3rem;
   margin-top: 3rem;
   display: flex;
   width: 100%;
   column-gap: 2rem;
   border-radius: 20px;
-  box-shadow: 5px 10px 15px rgba(63, 71, 100, 0.1);
+  box-shadow: var(--shadow);
 }
 
 
@@ -18,23 +18,77 @@
   align-self: start;
 }
 
+.userBox {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.userBox .userName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.usertit h3 {
+  margin-top: 0.8rem;
+  letter-spacing: -1px;
+  font-weight: 400;
+  font-size: 0.95rem;
+}
+
+.userBox .userName .joinDate {
+  align-self: start;
+}
+
 .userPage {
-  color: rgb(0, 136, 255);
+  color: var(--link);
 }
 
 .accountInfo {
   display: flex;
   column-gap: 5rem;
-  background-color: rgba(45, 55, 78, 0.473);
-  color: white;
-  padding: 2rem 1.5rem;
+  background-color: var(--info-back);
+  color: var(--info-txt);
+  padding: 1.5rem 3rem;
   border-radius: 20px;
 }
 
-.line {
-  border-bottom: 1px solid rgb(199, 200, 209);
+.accountInfo .box {
+  width: 5rem;
+}
+.accountInfo .tit {
+  font-size: 600;
+  letter-spacing: -0.2px;
 }
 
 .num {
   font-size: 2rem;
+  font-weight: 800;
+}
+
+.userBox .userEtc { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.userEtc .detailBox {
+  display: flex;
+  column-gap: 0.8rem;
+  align-items: center;
+}
+
+.userEtc .detailBox .icon {
+  font-size: 1.1rem;
+}
+
+.userEtc .detailBox .tit {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.userEtc .detailBox .infoTxt {
+  font-size: 0.7rem;
+  letter-spacing: -0.2px;
 }

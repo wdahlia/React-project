@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 40rem;
+  width: 50rem;
   /* border: 1px solid black; */
   padding: 1rem 0;
 }
@@ -13,6 +13,7 @@
   align-items: center;
   column-gap: 1rem;
   font-size: 1.3rem;
+  font-weight: 800;
 }
 /* .nav svg { 
   fill: white;
@@ -20,4 +21,5 @@
 
 .nav .btn {
   font-size: 1.6rem;
+  color: #67A2E6;
 }
