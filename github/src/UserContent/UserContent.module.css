@@ -91,4 +91,5 @@
 .userEtc .detailBox .infoTxt {
   font-size: 0.7rem;
   letter-spacing: -0.2px;
+  color: var(--txt);
 }

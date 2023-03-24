@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
 
 :root {
-  --icon: #e1fa3d;
+  --icon: #67A2E6;
   --background: #F5FAFD;
   --link: #0088FF;
   --info-back: #C0E2F994;
@@ -21,17 +21,17 @@
 }
 
 html .dark {
-  --icon: #67A2E6;
-  --background: #F5FAFD;
+  --icon: #D2FF09;
+  --background: #1D1E1F;
   --link: #0088FF;
-  --info-back: #C0E2F994;
-  --info-txt: #5B6274;
-  --container: #FFFFFF;
-  --shadow: 5px 10px 15px rgba(63, 71, 100, 0.1);
-  --search-back: #C0E2F9;
-  --search-shadow: 5px 5px 15px rgba(30, 91, 126, 0.1);
-  --search-icon: #86B5F6;
-  --txt: #000000;
+  --info-back: #45494B94;
+  --info-txt: #D4D8E1;
+  --container: #242426;
+  --shadow: 5px 10px 15px rgba(10, 15, 28, 0.1);
+  --search-back: #303234;
+  --search-shadow: 5px 5px 15px rgba(43, 47, 68, 0.1);
+  --search-icon: #7EA5F3;
+  --txt: #EBF2FE;
 }
 
 body {

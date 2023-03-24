@@ -11,9 +11,9 @@
 }
 
 .searchBar {
-  width: 100%;
-  border-radius: inherit;
+  width: 90%;
   background-color: inherit;
+  color: var(--txt);
 }
 
 .icon {
