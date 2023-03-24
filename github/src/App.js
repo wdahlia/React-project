@@ -1,30 +1,17 @@
 import './App.css';
+import UserProvider from './Context/UserContext';
 import Nav from './Nav/Nav';
 import SearchBar from './SearchBar/SearchBar';
 import UserContent from './UserContent/UserContent';
 
-function App(input) {
+function App() {
 
-  // const handleChange = (inputValue) => {
-  //   onChange={(e) => handleChange(e.target.value)}
-  //   let value = inputValue;
-
-  //   axios({
-  //     url: `https://api.github.com/users/${value}`,
-  //     method : 'GET',
-      
-  //   }).then((res) => {
-  //     console.log(res.data);
-  //   }).catch((error)=> {
-  //     console.log(error);
-  //   })
-  // }
   return (
-    <>
+    <UserProvider>
       <Nav />
       <SearchBar />
       <UserContent />
-    </>
+    </UserProvider>
   );
 }
 

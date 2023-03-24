@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './Nav.module.css';
 import { FaMoon } from 'react-icons/fa';
 import { FiSun } from 'react-icons/fi';
+import { useUserContext } from '../Context/UserContext';
 
 export default function Nav() {
-  const [mode, setMode] = useState(false);
-  
-  const handleClick = () => {
-    setMode(!mode);
-  }
-
+  const { handleToggle, darkMode } = useUserContext();
   return (
     <div className={styles.nav}>
       <div className={styles.logo}>
@@ -18,7 +14,7 @@ export default function Nav() {
         </svg>
         Search Github User
       </div>
-      <button onClick={handleClick} className={styles.btn}>{ mode ? <FiSun /> : <FaMoon /> }</button>
+      <button onClick={handleToggle} className={styles.btn}>{ darkMode ? <FiSun /> : <FaMoon /> }</button>
     </div>
   );
 }

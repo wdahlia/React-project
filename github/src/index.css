@@ -20,7 +20,7 @@
   box-sizing: border-box;
 }
 
-html .dark {
+.dark {
   --icon: #D2FF09;
   --background: #1D1E1F;
   --link: #0088FF;
