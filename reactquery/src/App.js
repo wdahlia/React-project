@@ -21,14 +21,12 @@ export default function App() {
   });
 
   const mutation = useMutation({
-    mutationFn: (title) => {
-      return wait(1000).then(() => POSTS.push({ id: crypto.randomUUID(), title }))
-    },
+    mutationFn: (title) => (POSTS.push({ id: crypto.randomUUID(), title })),
     onSuccess: () => queryClient.invalidateQueries(['posts']),
     retry: 2,
     // 기본 default 값이 3번이기 때문
   })
-  // 값을 push하는 것에 성공했다면,
+  // 값을 push하는 것에 성공했다면, 캐시된 posts란 값을 invalidate해라 즉, 결국 다시 refetch 해오는 것
 
   // useQuery 사용시 오류 발생 재 렌더링의 기본 default 값은 triple times
   // 3번 무조건 재 렌더링 즉, 오류가 나도 3번은 재 fetch 해온다라는 소리 retry로 렌더링 횟수 지정 가능
@@ -44,11 +42,12 @@ export default function App() {
       { postsQuery.data.map(post => (
         <div className='todo' key={post.id}>{post.title}</div>
       ))}
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        mutation.mutate(value);
-        const inputValue = document.getElementById('input')
-        inputValue.value = '';
+      <form 
+        onSubmit={(e) => {
+          e.preventDefault();
+          mutation.mutate(value);
+          const inputValue = document.getElementById('input')
+          inputValue.value = '';
       }}>
         <input id='input' placeholder='할 일을 입력하세요....' onChange={(e) => setValue(e.target.value)}/>
         <button className='btn' type='submit'>Send</button>

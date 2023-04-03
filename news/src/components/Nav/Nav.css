@@ -1,0 +1,14 @@
+.nav {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #b80000;
+  color: white;
+}
+
+.nav h1 {
+  font-size: 3rem;
+}
+
+.nav p {
+  font-size: 1.2rem;
+}

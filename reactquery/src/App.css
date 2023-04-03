@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+  background-color: rgb(195, 220, 255);
+  padding: 10rem 2rem;
+  border-radius: 20px;
 }
 
 .todo {
@@ -29,11 +32,11 @@ form {
 
 form .btn {
   position: absolute;
-  right: -3px;
+  right: -5px;
   padding: 0.8rem 1rem;
   background-color: rgb(38, 123, 252);
   color: white;
   font-size: 0.9rem;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: 10px;
 }

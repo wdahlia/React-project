@@ -12,7 +12,7 @@ export default function UserContent() {
   const { name, bio, avatar_url, login, created_at, public_repos, followers, following, company, blog, location, email } = userInfo;
 
   const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-  let date = new Date(created_at);
+  let date = new Date(created_at); 
 
   date = `Joined ${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`
 

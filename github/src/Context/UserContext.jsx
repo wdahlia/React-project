@@ -39,7 +39,6 @@ export default function UserProvider({ children }) {
 
 
 
-
   return (
     <UserContext.Provider 
       value={{ ...state, handleChange, handleToggle }}>
