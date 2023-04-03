@@ -1,0 +1,15 @@
+.btn {
+  background-color: rgb(245, 224, 210);
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  font-family: 'Helvetica Neue';
+}
+
+.btn:hover {
+  background-color: rgb(236, 185, 163);
+}
+
+.btn.selected {
+  background-color: #B80000;
+  color: white;
+}
