@@ -4,6 +4,11 @@
   overflow: hidden;
   width: 50rem;
   height: 20rem;
+  margin: 0 1rem;
+}
+
+.card img {
+  object-fit: cover;
 }
 
 .card .nullImg {
@@ -22,9 +27,9 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: rgba(10, 9, 9, 0.454);
+  background-color: rgba(10, 9, 9, 0.601);
   padding: 0 1rem 0 0;
-  color: white;
+  color: rgb(252, 251, 251);
   border-radius: 10px 0 10px 0;
   overflow: hidden;
 }
@@ -92,4 +97,12 @@
 
 .card:hover .infoArea {
   display: none;
+}
+
+.loading,
+.error {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5rem;
+  font-weight: 700;
 }

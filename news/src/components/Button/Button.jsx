@@ -3,6 +3,7 @@ import './Button.css';
 import styled, { css } from 'styled-components';
 
 
+
 const StyledButton = styled.button`
   background-color: rgb(245, 224, 210);
   font-weight: 600;
@@ -15,16 +16,21 @@ const StyledButton = styled.button`
   &:hover {
     background-color: rgb(236, 185, 163);
   }
+
+  &:disabled {
+    background-color: rgb(236, 185, 163);
+  }
+
   ${(props) => 
     props.detail && 
     css`
-    background-color: #B80000;
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    color: white;
-    
-    &:hover {
-      background-color: #A11000;
+      background-color: #B80000;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      color: white;
+      
+      &:hover {
+        background-color: #A11000;
     }
     `}
 `;

@@ -3,7 +3,6 @@ import Button from '../Button/Button';
 
 export default function NewsCard({ data }) {
   let { author, title, description, url, urlToImage, publishedAt } = data;
-  title = title.split('-')[0];
   let time = new Date(publishedAt);
   time = `${time.getFullYear()}년 ${time.getMonth() + 1}월 ${time.getDate()}일`
 
