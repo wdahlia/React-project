@@ -14,7 +14,7 @@ export default function Categories() {
 
   return (
     <div className='mx-5 category flex gap-x-2 mt-10'>
-      { categories.map((category, idx) => <Button key={idx} value={category}/>) }
+      { categories.map((category, idx) => <Button key={idx}>{category}</Button>) }
     </div>
   );
 }
