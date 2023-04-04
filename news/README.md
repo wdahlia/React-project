@@ -1,5 +1,8 @@
 # News
 
+![ezgif-3-5942e89419](https://user-images.githubusercontent.com/108653518/229806967-72967eeb-69e6-4b9c-9596-99fa3061c85c.gif)
+<br>
+
 ### News API
 - `Top headlines`
   - 나라의 주요 뉴스 헤드라인을 가져옴, 기사들은 최신 순으로 정렬되어 응답됨
@@ -47,3 +50,5 @@
   - 컴포넌트 내부에 컴포넌트가 존재하는 것이므로 prop다시 전달해주어야함
   - 여러개의 props 존재하는 경우 `{ ...props }` 형식으로 보내줄 수 있음
   - styled Components가 먹지 않는 오류 존재했으나 해당 create-react-app이 아닌 외부 폴더에 패키지 설치했었던 문제
+
+<br>
