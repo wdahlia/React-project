@@ -1,6 +1,9 @@
 
 # Search Github User
 
+배포 URL [https://lively-seahorse-c0928f.netlify.app]
+<br>
+
 ![ezgif-5-25bf1eb6ed](https://user-images.githubusercontent.com/108653518/227513668-910cc666-607e-4fc9-a066-a9dea91576cb.gif)
 
 <br>
